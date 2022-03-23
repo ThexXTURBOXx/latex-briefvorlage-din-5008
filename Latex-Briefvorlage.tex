@@ -4,35 +4,41 @@
 % Basiert auf KOMA-Scripts scrlttr2
 
 \documentclass[
-	% Schriftgröße
-	fontsize=12pt,
-	%
-	% zwischen Absätzen eine leere Zeile einfügen, statt lediglich Einrückung
-	parskip=full,
-	%
-	% Papierformat auf DIN-A4
-	paper=A4,	
-	%
-	% Briefkopf (ganz oben) rechts ausrichten, standardmäßig links
-	fromalign=right,
-	%
-	% Telefonnummer im Briefkopf anzeigen
-	fromphone=true,
-	%
-	% Faxnnummer im Briefkopf anzeigen
-	%fromfax=true,
-	%
-	% E-Mail-Adresse im Briefkopf anzeigen
-	fromemail=true,
-	%
-	% URL im Briefkopf anzeigen
-	%fromurl=true,
-	%
-	% Faltmarkierungen verbergen
-	%foldmarks=false,
-	%
-	% Die neuste Version von scrlettr2 verwenden 
-	version=last,
+    % Schriftgröße
+    fontsize=12pt,
+    %
+    % zwischen Absätzen eine leere Zeile einfügen, statt lediglich Einrückung
+    parskip=full,
+    %
+    % Papierformat auf DIN-A4
+    paper=A4,
+    %
+    % Mehr Platz am Ende der ersten Seite
+    enlargefirstpage=true,
+    %
+    % Absender im Briefkopf (ganz oben) rechts ausrichten, standardmäßig links
+    fromalign=right,
+    %
+    % Telefonnummer im Briefkopf anzeigen
+    fromphone=true,
+    %
+    % Faxnnummer im Briefkopf anzeigen
+    %fromfax=true,
+    %
+    % E-Mail-Adresse im Briefkopf anzeigen
+    fromemail=true,
+    %
+    % URL im Briefkopf anzeigen
+    %fromurl=true,
+    %
+    % Faltmarkierungen verbergen
+    %foldmarks=false,
+    %
+    % Briefkopf (Absenderdaten oben rechts) verbergen
+    %firsthead=off
+    %
+    % Die neuste Version von scrlettr2 verwenden
+    version=last,
 ]{scrlttr2}
 
 % Zeichenkodierung des Dokuments ist in UTF-8
@@ -58,9 +64,12 @@
 \usepackage{pdfpages}
 
 % klickbare Links und E-Mail-Adressen. Paket url kann keine klickbaren,
-% deswegen hyperref. Option hidelinks versteckt farbigen Rahmen.
+% deswegen hyperref. Option hidelinks versteckt farbige Umrandungen.
 \usepackage[hidelinks]{hyperref}
 
+% Mehr Platz auf der ersten Seite
+%\usepackage[left=2cm,right=2cm,top=0cm,bottom=0cm]{geometry}
+%\addtoplength[1]{firstfootvpos}{4cm}
 
 % ---------- METADATEN ----------
 % Absendername
@@ -129,15 +138,15 @@
 
 
 \begin{letter}{
-	Empfänger GmbH\\
-	Empfängerstraße 123\\
-	12345 Essen
+    Empfänger GmbH\\
+    Empfängerstraße 123\\
+    12345 Essen
 }
 
 \opening{Sehr geehrte Damen und Herren,}
 
 Loreß "`ipsum"' 200 € sit amet, consectetur adipiscing elit. Aliquam faucibus euismod nibh. Nulla condimentum, odio in vehicula bibendum, tellus libero varius sapien, vel aliquam elit mauris ut leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vitae dapibus felis, ut euismod lectus.
- 
+
 Vestibulum at auctor urna, in iaculis lectus. Nullam vitae magna metus. Praesent lacinia massa ac lobortis ullamcorper. Vestibulum laoreet, ligula ut tincidunt auctor, ligula lacus accumsan lectus, vitae aliquet justo diam et risus. Etiam suscipit magna vel velit tristique, quis egestas justo aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum sit amet elementum lacus, ac nulla.
 
 \closing{Mit freundlichen Grüßen}
@@ -167,8 +176,5 @@ Vestibulum at auctor urna, in iaculis lectus. Nullam vitae magna metus. Praesent
 % pages={1-4}			Seite 1-4
 % pages={1,4,5}			Seite 1, 4 und 5
 % pages={3,{},8-11,15}	Seite 3, leere Seite, Seite 8-11 und Seite 15
-% Der openright-Parameter startet die Anlagen auf ungerader (rechter) Seite, d.h. notfalls wird eine leere Seite
-% eingefügt. Im doppelseitigem Druck wird dadurch besser zwischen Brief und Anlage getrennt. Für einseitigen Druck
-% entfernen.
 
 \end{document}
